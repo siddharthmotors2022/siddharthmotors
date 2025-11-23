@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Siddharth Motors - Premium Car & EV Workshop</title>
+  <meta name="description" content="Siddharth Motors - advanced multi-brand car & EV workshop in Ganyari, Waidhan, Singrauli (M.P.). Complete service, denting-painting, engine work, EV repair, AC, electrical and more." />
+  <style>
+    :root{
+      --gold:#ffd54a;
+      --gold-strong:#ffc700;
+      --gold-soft:rgba(255,213,74,.35);
+      --bg:#020617;
+      --bg-alt:#020b24;
+      --card-bg:#050816;
+      --accent-blue:#1d4ed8;
+      --accent-purple:#6d28d9;
+      --accent-red:#ef4444;
+      --text-main:#f9fafb;
+      --text-sub:#a1a1aa;
+    }
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    }
+    body{
+      background:radial-gradient(circle at top,#02051a 0,#000 55%);
+      color:var(--text-main);
+      line-height:1.6;
+    }
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+    .container{max-width:1200px;margin:0 auto;padding:0 24px}
+    section{padding:70px 0;border-top:1px solid rgba(148,163,184,.18)}
+
+    .section-title{
+      font-size:34px;
+      font-weight:900;
+      text-transform:uppercase;
+      letter-spacing:.15em;
+      color:var(--gold-strong);
+      margin-bottom:10px;
+    }
+    .section-sub{
+      max-width:720px;
+      color:var(--text-sub);
+      font-size:15px;
+      margin-bottom:36px;
+    }
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      backdrop-filter:blur(22px);
+      background:linear-gradient(to right,rgba(15,23,42,.9),rgba(15,23,42,.7));
+      border-bottom:1px solid rgba(148,163,184,.3);
+    }
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:10px 0;
+    }
+    .logo-wrap{
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+    .logo-circle{
+      width:46px;height:46px;border-radius:999px;
+      border:2px solid var(--gold-strong);
+      box-shadow:0 0 24px rgba(252,211,77,.9);
+      overflow:hidden;
+    }
+    .logo-circle img{width:100%;height:100%;object-fit:cover}
+    .brand-text span:first-child{
+      font-size:17px;font-weight:900;letter-spacing:.4em;color:var(--gold-strong);
+    }
+    .brand-text span:last-child{
+      font-size:11px;text-transform:uppercase;letter-spacing:.25em;color:var(--text-sub);
+    }
+    .nav-links{
+      display:flex;gap:22px;font-size:12px;text-transform:uppercase;
+      letter-spacing:.2em;font-weight:600;color:#e5e7eb;
+    }
+    .nav-links a{
+      position:relative;padding-bottom:4px;
+    }
+    .nav-links a::after{
+      content:"";position:absolute;left:0;bottom:0;height:2px;width:0;
+      background:linear-gradient(90deg,var(--gold-strong),var(--accent-purple));
+      transition:width .25s ease-out;
+    }
+    .nav-links a:hover{color:var(--gold-strong)}
+    .nav-links a:hover::after{width:100%}
+
+    .hero{
+      min-height:85vh;
+      display:flex;
+      align-items:center;
+      position:relative;
+      overflow:hidden;
+      padding:0;
+    }
+    .hero::before{
+      content:"";
+      position:absolute;inset:0;
+      background:url("promo-bmw.jpg") center/cover no-repeat;
+      filter:brightness(.18) contrast(1.15) saturate(1.1);
+      z-index:0;
+    }
+    .hero-gradient{
+      position:absolute;inset:0;
+      background:radial-gradient(circle at top left,rgba(37,99,235,.55),transparent 55%),
+                 radial-gradient(circle at bottom right,rgba(168,85,247,.5),transparent 55%);
+      mix-blend-mode:screen;opacity:.7;
+    }
+    .hero-inner{
+      position:relative;z-index:1;padding:80px 0;
+      max-width:640px;
+    }
+    .hero-tag{
+      font-size:12px;
+      letter-spacing:.35em;
+      text-transform:uppercase;
+      color:var(--gold-soft);
+      margin-bottom:8px;
+    }
+    .hero-title{
+      font-size:clamp(44px,6vw,68px);
+      line-height:1.05;
+      font-weight:900;
+      text-shadow:0 18px 60px #000;
+    }
+    .hero-title span{
+      display:block;
+      color:var(--gold-strong);
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      font-size:.38em;
+      margin-top:4px;
+    }
+    .hero-sub{
+      margin-top:18px;
+      color:#d1d5db;
+      font-size:16px;
+      max-width:520px;
+    }
+    .hero-actions{
+      margin-top:26px;
+      display:flex;flex-wrap:wrap;gap:16px;
+    }
+    .btn-primary,.btn-ghost{
+      border-radius:999px;
+      padding:12px 26px;
+      border:none;
+      font-size:13px;
+      font-weight:700;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      cursor:pointer;
+      display:inline-flex;align-items:center;gap:8px;
+      box-shadow:0 18px 45px rgba(0,0,0,.7);
+      transition:.25s ease-out;
+      white-space:nowrap;
+    }
+    .btn-primary{
+      background:linear-gradient(110deg,var(--gold-strong),#ff7a3c);
+      color:#111827;
+    }
+    .btn-primary span{font-weight:900}
+    .btn-primary:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 26px 60px rgba(245,158,11,.9);}
+    .btn-ghost{
+      background:rgba(15,23,42,.8);
+      border:1px solid rgba(148,163,184,.6);
+      color:#e5e7eb;
+    }
+    .btn-ghost:hover{
+      border-color:var(--gold-strong);
+      color:var(--gold-strong);
+      background:radial-gradient(circle at top,var(--bg-alt),#020617);
+    }
+    .hero-note{
+      margin-top:10px;
+      font-size:13px;
+      color:var(--text-sub);
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:22px;
+    }
+    .card{
+      background:radial-gradient(circle at top left,#020617 0,#020617 35%,#020b24 100%);
+      border-radius:18px;
+      padding:22px 20px;
+      border:1px solid rgba(148,163,184,.4);
+      box-shadow:0 22px 55px rgba(15,23,42,.95);
+      position:relative;
+      overflow:hidden;
+      transition:.25s ease-out;
+    }
+    .card::before{
+      content:"";
+      position:absolute;
+      inset:-40%;
+      background:radial-gradient(circle at top,var(--gold-soft),transparent 55%);
+      opacity:0;
+      transition:opacity .3s;
+      pointer-events:none;
+    }
+    .card:hover{transform:translateY(-8px);border-color:var(--gold-soft);}
+    .card:hover::before{opacity:.8;}
+    .card h3{
+      font-size:18px;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      color:var(--gold-strong);
+      margin-bottom:6px;
+    }
+    .card p{font-size:14px;color:var(--text-sub);}
+    .card ul{
+      margin-top:14px;
+      padding-left:18px;
+      font-size:14px;
+      color:var(--text-sub);
+    }
+    .card ul li{margin-bottom:6px;}
+    .card ul li strong{color:var(--gold-strong);}
+
+    .badge-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:6px;
+    }
+    .badge{
+      font-size:11px;
+      padding:4px 10px;
+      border-radius:999px;
+      border:1px solid rgba(148,163,184,.5);
+      color:#e5e7eb;
+      background:rgba(15,23,42,.8);
+    }
+    .badge.blue{border-color:var(--accent-blue);color:var(--accent-blue);}
+    .badge.red{border-color:var(--accent-red);color:var(--accent-red);}
+    .badge.purple{border-color:var(--accent-purple);color:var(--accent-purple);}
+
+    .promo-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:18px;
+    }
+    .promo-item{
+      position:relative;
+      border-radius:16px;
+      overflow:hidden;
+      border:1px solid rgba(148,163,184,.5);
+      box-shadow:0 18px 48px rgba(15,23,42,.9);
+    }
+    .promo-item img{
+      width:100%;
+      height:210px;
+      object-fit:cover;
+      filter:brightness(.97);
+      transition:transform .35s,filter .35s;
+    }
+    .promo-item:hover img{
+      transform:scale(1.05);
+      filter:brightness(1.05);
+    }
+    .promo-logo{
+      position:absolute;
+      top:10px;left:10px;
+      width:32px;height:32px;border-radius:999px;
+      border:2px solid var(--gold-strong);
+      overflow:hidden;
+      box-shadow:0 0 12px rgba(250,204,21,.9);
+      background:#000;
+    }
+    .promo-logo img{width:100%;height:100%;object-fit:cover;}
+
+    .slider-wrapper{
+      border-radius:22px;
+      overflow:hidden;
+      border:1px solid rgba(148,163,184,.65);
+      box-shadow:0 26px 70px rgba(15,23,42,1);
+      background:#000;
+    }
+    .slider{position:relative;width:100%;height:420px;}
+    .slide{
+      position:absolute;inset:0;
+      opacity:0;transition:opacity .7s ease-in-out;
+    }
+    .slide img{width:100%;height:100%;object-fit:cover;}
+    .slide.active{opacity:1;}
+    .slider-dots{
+      display:flex;justify-content:center;gap:10px;
+      padding:12px 0;
+      background:linear-gradient(to right,#020617,#020b24);
+      border-top:1px solid rgba(148,163,184,.4);
+    }
+    .slider-dots span{
+      width:10px;height:10px;border-radius:999px;
+      border:1px solid var(--gold-soft);
+      cursor:pointer;
+      transition:.25s;
+    }
+    .slider-dots span.active{
+      background:var(--gold-strong);
+      border-color:var(--gold-strong);
+      box-shadow:0 0 10px rgba(250,204,21,.9);
+    }
+
+    .two-col{
+      display:grid;
+      grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);
+      gap:36px;
+      align-items:flex-start;
+    }
+
+    .contact-info p{font-size:15px;margin-bottom:10px;color:#e5e7eb;}
+    .contact-info strong{color:var(--gold-strong);}
+    .contact-links a{
+      color:var(--accent-blue);
+      font-size:14px;
+    }
+
+    .contact-box{
+      background:radial-gradient(circle at top left,#020617,#020b24 60%);
+      border-radius:18px;
+      padding:24px;
+      border:1px solid rgba(148,163,184,.7);
+      box-shadow:0 22px 55px rgba(15,23,42,1);
+    }
+    .contact-box label{
+      display:block;
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:.16em;
+      color:var(--gold-soft);
+      margin-bottom:4px;
+    }
+    .contact-box input,
+    .contact-box textarea,
+    .contact-box select{
+      width:100%;
+      margin-bottom:12px;
+      border-radius:10px;
+      border:1px solid rgba(148,163,184,.7);
+      background:#020617;
+      color:#e5e7eb;
+      padding:10px 11px;
+      font-size:14px;
+      outline:none;
+      transition:.2s;
+    }
+    .contact-box input:focus,
+    .contact-box textarea:focus,
+    .contact-box select:focus{
+      border-color:var(--gold-strong);
+      box-shadow:0 0 0 2px rgba(250,204,21,.35);
+    }
+    .contact-box textarea{min-height:90px;resize:vertical;}
+
+    .ratings-row{
+      display:flex;align-items:center;gap:8px;margin-bottom:10px;
+      font-size:13px;color:var(--text-sub);
+    }
+    .star-input{
+      display:flex;flex-direction:row-reverse;
+      font-size:22px;gap:3px;cursor:pointer;
+    }
+    .star-input input{display:none;}
+    .star-input label{
+      color:#4b5563;
+      transition:.2s;
+    }
+    .star-input input:checked ~ label,
+    .star-input label:hover,
+    .star-input label:hover ~ label{
+      color:var(--gold-strong);
+    }
+
+    #reviews{
+      background:radial-gradient(circle at top,#020b24,#020617 70%);
+    }
+    .reviews-layout{
+      display:grid;
+      grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);
+      gap:32px;
+      align-items:flex-start;
+    }
+    .reviews-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+      gap:18px;
+    }
+    .review-card{
+      background:linear-gradient(145deg,#020617,#020b24);
+      border-radius:16px;
+      border:1px solid rgba(148,163,184,.7);
+      padding:16px 14px 14px;
+      box-shadow:0 18px 45px rgba(15,23,42,1);
+      position:relative;
+      overflow:hidden;
+    }
+    .review-card::before{
+      content:"";
+      position:absolute;
+      inset:-40%;
+      background:radial-gradient(circle at top,rgba(250,204,21,.35),transparent 55%);
+      opacity:0;
+      transition:.3s;
+    }
+    .review-card:hover::before{opacity:.9;}
+    .review-text{
+      font-size:14px;
+      color:#e5e7eb;
+      margin-bottom:10px;
+    }
+    .review-name{
+      font-weight:700;
+      color:var(--gold-strong);
+      font-size:14px;
+    }
+    .review-meta{
+      font-size:12px;
+      color:var(--text-sub);
+    }
+    .review-stars{
+      font-size:16px;
+      color:var(--gold-strong);
+      margin-bottom:6px;
+    }
+    .review-tag{
+      position:absolute;
+      top:10px;right:10px;
+      font-size:10px;
+      text-transform:uppercase;
+      letter-spacing:.18em;
+      color:rgba(148,163,184,.9);
+    }
+    .review-form h3{
+      font-size:16px;
+      text-transform:uppercase;
+      letter-spacing:.18em;
+      color:var(--gold-strong);
+      margin-bottom:8px;
+    }
+    .review-form p{
+      font-size:13px;
+      color:var(--text-sub);
+      margin-bottom:12px;
+    }
+    .review-form small{font-size:11px;color:var(--text-sub);}
+    .toast{
+      margin-top:6px;
+      font-size:12px;
+      color:var(--gold-strong);
+      display:none;
+    }
+    .toast.show{display:block;}
+
+    .review-owner-actions{
+      margin-top:10px;
+      display:none;
+      gap:8px;
+    }
+    .review-owner-actions button{
+      font-size:11px;
+      padding:4px 9px;
+      border-radius:999px;
+      border:1px solid rgba(148,163,184,.7);
+      background:#020617;
+      color:#e5e7eb;
+      cursor:pointer;
+    }
+    .review-owner-actions button:hover{
+      border-color:var(--gold-strong);
+      color:var(--gold-strong);
+    }
+    body.owner-on .review-owner-actions{
+      display:flex;
+    }
+    .review-reply{
+      margin-top:6px;
+      font-size:12px;
+      color:#9ca3af;
+      border-left:2px solid var(--gold-soft);
+      padding-left:8px;
+    }
+
+    footer{
+      padding:26px 0 32px;
+      text-align:center;
+      font-size:12px;
+      color:var(--text-sub);
+      border-top:1px solid rgba(148,163,184,.3);
+    }
+
+    @media(max-width:992px){
+      .nav-links{display:none;}
+      header{position:static;}
+      .hero{min-height:auto;}
+      .hero-inner{padding:56px 0 60px;}
+      .slider{height:300px;}
+      .two-col,.reviews-layout{grid-template-columns:1fr;}
+    }
+    @media(max-width:640px){
+      .section-title{font-size:26px;}
+      section{padding:50px 0;}
+      .hero-title{font-size:36px;}
+      .hero-actions{flex-direction:column;align-items:flex-start;}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="nav">
+      <div class="logo-wrap">
+        <div class="logo-circle">
+          <img src="logo-siddharth.png" alt="Siddharth Motors Logo">
+        </div>
+        <div class="brand-text">
+          <span>SIDDHARTH MOTORS</span>
+          <span>ADVANCED WORKSHOP • SINGRAULI</span>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#cleaning">Cleaning</a>
+        <a href="#ev-advanced">EV & Advance</a>
+        <a href="#why-us">Why Us</a>
+        <a href="#gallery">Workshop</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-gradient"></div>
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-tag">GANYARI • WAIDHAN • SINGRAULI (M.P.)</div>
+      <h1 class="hero-title">
+        SIDDHARTH MOTORS
+        <span>PREMIUM CAR & EV WORKSHOP</span>
+      </h1>
+      <p class="hero-sub">
+        World-class care for your car or Electric Vehicle with advanced tools, genuine parts, and personal supervision. From accident repair to deep cleaning – everything under one roof.
+      </p>
+      <div class="hero-actions">
+        <a href="tel:+916260946085"><button class="btn-primary">📞 CALL NOW <span>62609 46085</span></button></a>
+        <a href="https://wa.me/919425390784?text=Hello%20Siddharth%20Motors%2C%20I%20want%20to%20book%20a%20service." target="_blank">
+          <button class="btn-ghost">💬 WHATSAPP 94253 90784</button>
+        </a>
+      </div>
+      <p class="hero-note">OPEN: <strong>7:00 AM – 10:00 PM</strong> • ALL 7 DAYS • MULTI-BRAND & EV SUPPORT</p>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <h2 class="section-title">Services</h2>
+    <p class="section-sub">
+      Complete multi-brand solutions for hatchbacks, sedans, SUVs, commercial vehicles and EVs – all handled with precision and honesty.
+    </p>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Full Car Service</h3>
+        <p>Manufacturer-style periodic service for performance, safety and mileage.</p>
+        <ul>
+          <li>Engine oil & filter replacement</li>
+          <li>Brake, coolant, gearbox check</li>
+          <li>Digital multi-point inspection report</li>
+        </ul>
+        <div class="badge-row">
+          <span class="badge blue">Periodical</span>
+          <span class="badge purple">Multi-brand</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Denting & Painting</h3>
+        <p>Accident repair to showroom finish, with colour matched exactly to original.</p>
+        <ul>
+          <li>Accident body repair and panel replacement</li>
+          <li>Dust-controlled paint booth work</li>
+          <li>Insurance cashless support (as per policy)</li>
+        </ul>
+        <div class="badge-row">
+          <span class="badge red">Accident Jobs</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Engine & Clutch</h3>
+        <p>From minor noises to full engine overhauling – accurate diagnosis and repair.</p>
+        <ul>
+          <li>Full engine overhaul & timing work</li>
+          <li>Complete clutch & pressure plate kits</li>
+          <li>Compression & performance tests</li>
+        </ul>
+        <div class="badge-row">
+          <span class="badge blue">Powertrain</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>AC & Electrical</h3>
+        <p>Stay comfortable and safe with a healthy AC and perfect electricals.</p>
+        <ul>
+          <li>AC gas filling, cooling coil & compressor work</li>
+          <li>Wiring, fuse and sensor repairs</li>
+          <li>Lighting, horn, starter & alternator</li>
+        </ul>
+        <div class="badge-row">
+          <span class="badge">Summer Ready</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Tyres & Brakes</h3>
+        <p>Control and safety focused tyre, suspension and brake service.</p>
+        <ul>
+          <li>Tyre replacement & puncture repair</li>
+          <li>Wheel balancing & alignment</li>
+          <li>Brake pad, disc & suspension check</li>
+        </ul>
+        <div class="badge-row">
+          <span class="badge red">Safety First</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Accessories & Detailing</h3>
+        <p>Make your car look and feel new with premium accessories and detailing.</p>
+        <ul>
+          <li>Seat covers, music system, cameras</li>
+          <li>Interior shampoo, polishing, waxing</li>
+          <li>Custom lighting & styling upgrades</li>
+        </ul>
+        <div class="badge-row">
+          <span class="badge purple">Style</span>
+          <span class="badge blue">Comfort</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cleaning">
+  <div class="container">
+    <h2 class="section-title">Cleaning & Detailing Studio</h2>
+    <p class="section-sub">
+      From dusty to dazzling – Siddharth Motors offers dedicated cleaning packages so your car smells, feels and shines like new.
+    </p>
+    <div class="cards">
+      <div class="card">
+        <h3>Express Wash</h3>
+        <p>Quick yet careful cleaning for your busy schedule.</p>
+        <ul>
+          <li>Pressure underbody wash</li>
+          <li>Foam body wash & rinse</li>
+          <li>Tyre & wheel arch cleaning</li>
+        </ul>
+        <div class="badge-row">
+          <span class="badge blue">30–45 mins</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Interior Deep Clean</h3>
+        <p>Perfect for cars with kids, pets or long trips.</p>
+        <ul>
+          <li>Full vacuuming & dust removal</li>
+          <li>Dashboard, console & panel wipe</li>
+          <li>Seat & floor mat cleaning</li>
+        </ul>
+        <div class="badge-row">
+          <span class="badge purple">Hygiene</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Premium Detailing</h3>
+        <p>High-end treatment for serious car lovers.</p>
+        <ul>
+          <li>Machine polish & paint shine restoration</li>
+          <li>Glass, chrome & plastic treatment</li>
+          <li>Interior perfume & finishing touches</li>
+        </ul>
+        <div class="badge-row">
+          <span class="badge red">Showroom Feel</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="ev-advanced">
+  <div class="container">
+    <h2 class="section-title">EV & Advanced Diagnostics</h2>
+    <p class="section-sub">
+      2019 se trusted workshop – 2024 se fully upgraded advanced facility with EV-ready tools and high-end scanners.
+    </p>
+    <div class="cards">
+      <div class="card">
+        <h3>EV Service</h3>
+        <p>Care for your Electric Vehicle with safety and precision.</p>
+        <ul>
+          <li>High-voltage system health checks</li>
+          <li>Battery cooling & connections inspection</li>
+          <li>EV-specific brake & tyre inspection</li>
+        </ul>
+        <div class="badge-row">
+          <span class="badge blue">EV Ready</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>OBD Scanning</h3>
+        <p>Find the exact fault instead of guessing and changing parts blindly.</p>
+        <ul>
+          <li>Multi-brand OBD scanning (Tata, Mahindra, Maruti, Hyundai, etc.)</li>
+          <li>Live data monitoring during road test</li>
+          <li>Error code explanation in simple language</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>ECU & Coding</h3>
+        <p>Electronic control unit related programming and coding.</p>
+        <ul>
+          <li>ECU reset, adaptation & coding</li>
+          <li>Key & immobilizer programming (as per support)</li>
+          <li>Software updates where available</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Smart Diagnostics</h3>
+        <p>Use of scanners, tools and experience together – not just trial and error.</p>
+        <ul>
+          <li>Noise, vibration and leak tracing</li>
+          <li>Sensor and wiring testing</li>
+          <li>Pre-purchase inspection reports</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="why-us">
+  <div class="container">
+    <h2 class="section-title">Why Choose Siddharth Motors</h2>
+    <p class="section-sub">
+      Owner-supervised work, honest pricing and respect for your time – that’s the Siddharth Motors difference.
+    </p>
+    <div class="cards">
+      <div class="card">
+        <h3>Owner Supervision</h3>
+        <p>Work is personally checked so that standards never drop.</p>
+        <ul><li>Direct discussion with owner for major work</li></ul>
+      </div>
+      <div class="card">
+        <h3>Transparent Pricing</h3>
+        <p>No surprise bills – you are informed and approved before work starts.</p>
+        <ul><li>Estimate sharing & part-wise breakup</li></ul>
+      </div>
+      <div class="card">
+        <h3>Genuine Parts</h3>
+        <p>Only quality OEM / OES parts for safety and long life.</p>
+        <ul><li>Part warranty wherever applicable</li></ul>
+      </div>
+      <div class="card">
+        <h3>Same-Day Focus</h3>
+        <p>Maximum jobs target same-day delivery depending on workload.</p>
+        <ul><li>Quick coordination for insurance & parts</li></ul>
+      </div>
+      <div class="card">
+        <h3>Long Working Hours</h3>
+        <p>Open from <strong>7:00 AM to 10:00 PM</strong> – all 7 days.</p>
+        <ul><li>Easy for office-going customers</li></ul>
+      </div>
+      <div class="card">
+        <h3>Friendly Environment</h3>
+        <p>Clear communication, chai and comfortable dealing – no attitude.</p>
+        <ul><li>Long-term relationship focus</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2 class="section-title">Our Commitment in Pictures</h2>
+    <p class="section-sub">
+      Real shots from Siddharth Motors – your car in safe, professional hands.
+    </p>
+    <div class="promo-grid">
+      <div class="promo-item">
+        <img src="promo-board.jpg" alt="Siddharth Motors main board and entrance">
+        <div class="promo-logo"><img src="logo-siddharth.png" alt="Siddharth Motors"></div>
+      </div>
+      <div class="promo-item">
+        <img src="promo-affordable.jpg" alt="Affordable and transparent repairs">
+        <div class="promo-logo"><img src="logo-siddharth.png" alt="Siddharth Motors"></div>
+      </div>
+      <div class="promo-item">
+        <img src="workshop4.jpg" alt="Paint booth and premium finish jobs">
+        <div class="promo-logo"><img src="logo-siddharth.png" alt="Siddharth Motors"></div>
+      </div>
+      <div class="promo-item">
+        <img src="workshop1.jpg" alt="Large workshop area with multiple vehicles">
+        <div class="promo-logo"><img src="logo-siddharth.png" alt="Siddharth Motors"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="container">
+    <h2 class="section-title">The State-of-the-Art Workshop</h2>
+    <p class="section-sub">
+      A look inside our organized, well-equipped facility designed for precision and efficiency.
+    </p>
+    <div class="slider-wrapper">
+      <div class="slider" id="slider">
+        <div class="slide active"><img src="workshop1.jpg" alt="Workshop top view"></div>
+        <div class="slide"><img src="workshop2.jpg" alt="Service bays and vehicles"></div>
+        <div class="slide"><img src="workshop3.jpg" alt="Workshop entry and parking"></div>
+      </div>
+      <div class="slider-dots" id="slider-dots">
+        <span class="active" data-index="0"></span>
+        <span data-index="1"></span>
+        <span data-index="2"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="container">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:10px;flex-wrap:wrap;">
+      <div>
+        <h2 class="section-title">Customer Reviews</h2>
+        <p class="section-sub">
+          Some words from customers who trusted Siddharth Motors with their vehicles – plus your live reviews below.
+        </p>
+      </div>
+      <button id="owner-toggle" class="btn-ghost" style="font-size:10px;padding:7px 14px;border-radius:999px;">
+        OWNER MODE
+      </button>
+    </div>
+
+    <div class="reviews-layout">
+      <div>
+        <div class="reviews-grid" id="reviews-grid">
+          <div class="review-card">
+            <div class="review-tag">Verified</div>
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">“Best workshop in Singrauli. My car’s accident repair and paint work came out better than showroom. Delivery bhi time pe.”</p>
+            <div class="review-name">Raj Sharma</div>
+            <div class="review-meta">Waidhan • Swift Dzire</div>
+          </div>
+          <div class="review-card">
+            <div class="review-tag">Regular Service</div>
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">“Yahan estimate clear milta hai, koi hidden charge nahi. Owner khud gaadi check karte hain. Family ki dono gaadiyaan yahi bhejta hoon.”</p>
+            <div class="review-name">Aditya Verma</div>
+            <div class="review-meta">Morba • Baleno & WagonR</div>
+          </div>
+          <div class="review-card">
+            <div class="review-tag">EV Ready</div>
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">“Meri Tata Punch EV ka service proper scanner se kiya. Staff ko EV ke bare me clear knowledge hai, koi timepass nahi.”</p>
+            <div class="review-name">Rishabh Kumar</div>
+            <div class="review-meta">Jayant • Punch EV</div>
+          </div>
+          <div class="review-card">
+            <div class="review-tag">Detailing</div>
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">“Interior cleaning + polish ke baad 7 saal purani car bilkul fresh lagne lagi. Photos ke liye log rukh ke dekhte hain ab.”</p>
+            <div class="review-name">Manoj Singh</div>
+            <div class="review-meta">Bargawan • XUV500</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-form">
+        <h3>Write a Review</h3>
+        <p>Service pasand aayi? Neeche apna feedback likhiye – yeh review isi device par sabhi visitors ko dikhega.</p>
+        <div class="contact-box">
+          <form id="review-form">
+            <label for="rev-name">Name</label>
+            <input id="rev-name" type="text" required placeholder="Your name">
+
+            <label for="rev-car">Car / Model</label>
+            <input id="rev-car" type="text" placeholder="Car name (optional)">
+
+            <div class="ratings-row">
+              <span>Rating:</span>
+              <div class="star-input">
+                <input type="radio" id="rv5" name="rev-rating" value="5" checked><label for="rv5">★</label>
+                <input type="radio" id="rv4" name="rev-rating" value="4"><label for="rv4">★</label>
+                <input type="radio" id="rv3" name="rev-rating" value="3"><label for="rv3">★</label>
+                <input type="radio" id="rv2" name="rev-rating" value="2"><label for="rv2">★</label>
+                <input type="radio" id="rv1" name="rev-rating" value="1"><label for="rv1">★</label>
+              </div>
+            </div>
+
+            <label for="rev-text">Your Review</label>
+            <textarea id="rev-text" required placeholder="How was your experience at Siddharth Motors?"></textarea>
+
+            <button type="submit" class="btn-primary" style="width:100%;justify-content:center;">SUBMIT REVIEW</button>
+            <div id="review-toast" class="toast">Thank you! Your review is now visible on this page.</div>
+            <small>Note: Reviews are stored in this device's browser. For official complaints or urgent support, please call or WhatsApp directly.</small>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <h2 class="section-title">Contact & Location</h2>
+    <p class="section-sub">
+      Book a service slot, ask for an estimate, or find the easiest route to our workshop on Ganyari Road.
+    </p>
+
+    <div class="two-col">
+      <div>
+        <div class="contact-info">
+          <p><strong>Primary Call:</strong> <a href="tel:+916260946085">+91 62609 46085</a></p>
+          <p><strong>WhatsApp:</strong> <a href="https://wa.me/919425390784" target="_blank">+91 94253 90784</a></p>
+          <p><strong>Alternate Call:</strong> <a href="tel:+919584892337">+91 95848 92337</a></p>
+          <p><strong>Email:</strong> <a href="mailto:Siddharthmotors2022@gmail.com">Siddharthmotors2022@gmail.com</a></p>
+          <p><strong>Address:</strong> Siddharth Motors, Ganyari, Waidhan, Singrauli, Madhya Pradesh, India</p>
+        </div>
+        <div style="margin-top:18px" class="contact-links">
+          <p>📍 <a href="https://share.google/0aVYttlIFhu1gWWZs" target="_blank">Open Siddharth Motors on Google Maps</a></p>
+          <p>📷 <a href="https://www.instagram.com/siddharth_motors_waidhan" target="_blank">Follow workshop on Instagram</a></p>
+          <p>🔗 <a href="https://jsdl.in/RSL-XRB1763716479" target="_blank">See listing on JustDial</a></p>
+        </div>
+      </div>
+
+      <div class="contact-box">
+        <form action="mailto:Siddharthmotors2022@gmail.com" method="post" enctype="text/plain">
+          <label for="name">Name</label>
+          <input id="name" name="Name" type="text" placeholder="Your name" required />
+
+          <label for="cust-email">Email</label>
+          <input id="cust-email" name="Customer Email" type="email" placeholder="you@example.com" required />
+
+          <label for="phone">Mobile Number</label>
+          <input id="phone" name="Phone" type="tel" placeholder="Your best contact number" required />
+
+          <label for="service">Service Type</label>
+          <select id="service" name="Service">
+            <option value="General Service">General Service</option>
+            <option value="Accident / Denting - Painting">Accident / Denting – Painting</option>
+            <option value="EV / Electrical">EV / Electrical</option>
+            <option value="Cleaning / Detailing">Cleaning / Detailing</option>
+            <option value="Tyre / Brakes / Suspension">Tyre / Brakes / Suspension</option>
+            <option value="Other">Other</option>
+          </select>
+
+          <label for="message">Your Message / Service Request</label>
+          <textarea id="message" name="Message" placeholder="Car model, problem details, preferred date and time."></textarea>
+
+          <button type="submit" class="btn-primary" style="width:100%;justify-content:center;">SEND ENQUIRY EMAIL</button>
+          <p style="font-size:11px;color:var(--text-sub);margin-top:8px;">Note: This will open your email app with all details filled. For fastest confirmation, please use WhatsApp or call directly.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © <span id="year"></span> Siddharth Motors, Ganyari – Waidhan, Singrauli (M.P.). All rights reserved.
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  const slides = document.querySelectorAll("#slider .slide");
+  const dots = document.querySelectorAll("#slider-dots span");
+  let currentIndex = 0;
+
+  function showSlide(index) {
+    slides.forEach((s, i) => s.classList.toggle("active", i === index));
+    dots.forEach((d, i) => d.classList.toggle("active", i === index));
+    currentIndex = index;
+  }
+
+  dots.forEach(dot => {
+    dot.addEventListener("click", () => {
+      const index = parseInt(dot.getAttribute("data-index"));
+      showSlide(index);
+    });
+  });
+
+  setInterval(() => {
+    const next = (currentIndex + 1) % slides.length;
+    showSlide(next);
+  }, 4500);
+
+  const reviewForm = document.getElementById("review-form");
+  const reviewGrid = document.getElementById("reviews-grid");
+  const reviewToast = document.getElementById("review-toast");
+  const ownerToggle = document.getElementById("owner-toggle");
+  const OWNER_PIN = "SMOWNER2024";
+
+  function loadStoredReviews() {
+    try {
+      const raw = localStorage.getItem("sm_reviews");
+      if (!raw) return [];
+      return JSON.parse(raw);
+    } catch (e) {
+      return [];
+    }
+  }
+
+  function saveStoredReviews(list) {
+    try {
+      localStorage.setItem("sm_reviews", JSON.stringify(list));
+    } catch (e) {}
+  }
+
+  function renderDynamicReviews() {
+    const list = loadStoredReviews();
+    document.querySelectorAll(".review-card.dynamic").forEach(el => el.remove());
+
+    list.forEach((item, index) => {
+      const card = document.createElement("div");
+      card.className = "review-card dynamic";
+      const stars = "★★★★★".slice(0, item.rating).padEnd(5, "☆");
+      card.innerHTML = `
+        <div class="review-tag">Customer</div>
+        <div class="review-stars">${stars}</div>
+        <p class="review-text">${item.text}</p>
+        <div class="review-name">${item.name}</div>
+        <div class="review-meta">${item.car || ""}</div>
+        ${item.reply ? `<div class="review-reply"><strong>Owner reply:</strong> ${item.reply}</div>` : ""}
+        <div class="review-owner-actions">
+          <button data-idx="${index}" class="rv-reply">Reply</button>
+          <button data-idx="${index}" class="rv-delete">Delete</button>
+        </div>
+      `;
+      reviewGrid.appendChild(card);
+    });
+  }
+
+  renderDynamicReviews();
+
+  reviewForm.addEventListener("submit", function(e){
+    e.preventDefault();
+    const name = document.getElementById("rev-name").value.trim();
+    const car = document.getElementById("rev-car").value.trim();
+    const text = document.getElementById("rev-text").value.trim();
+    const ratingEl = document.querySelector('input[name="rev-rating"]:checked');
+    const rating = ratingEl ? parseInt(ratingEl.value,10) : 5;
+    if (!name || !text) return;
+
+    const list = loadStoredReviews();
+    list.push({name, car, text, rating, reply:""});
+    saveStoredReviews(list);
+    renderDynamicReviews();
+
+    reviewForm.reset();
+    document.getElementById("rv5").checked = true;
+    reviewToast.classList.add("show");
+    setTimeout(()=>reviewToast.classList.remove("show"),4000);
+  });
+
+  ownerToggle.addEventListener("click", () => {
+    if (document.body.classList.contains("owner-on")) {
+      document.body.classList.remove("owner-on");
+      ownerToggle.textContent = "OWNER MODE";
+    } else {
+      const pin = prompt("Enter owner PIN:");
+      if (pin === OWNER_PIN) {
+        document.body.classList.add("owner-on");
+        ownerToggle.textContent = "OWNER MODE (ON)";
+      } else if (pin !== null) {
+        alert("Wrong PIN");
+      }
+    }
+  });
+
+  reviewGrid.addEventListener("click", (e) => {
+    const delBtn = e.target.closest(".rv-delete");
+    const repBtn = e.target.closest(".rv-reply");
+    if (!delBtn && !repBtn) return;
+
+    let list = loadStoredReviews();
+    const idx = parseInt((delBtn || repBtn).dataset.idx, 10);
+
+    if (delBtn) {
+      if (confirm("Delete this review?")) {
+        list.splice(idx, 1);
+        saveStoredReviews(list);
+        renderDynamicReviews();
+      }
+    } else if (repBtn) {
+      const current = list[idx];
+      const reply = prompt("Write your reply for this customer:", current.reply || "");
+      if (reply !== null) {
+        list[idx].reply = reply.trim();
+        saveStoredReviews(list);
+        renderDynamicReviews();
+      }
+    }
+  });
+</script>
+
+</body>
+</html>
+```0
